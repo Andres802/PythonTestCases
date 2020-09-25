@@ -63,3 +63,37 @@ Now you can use it:
     Es maluquitox :
     <BLANKLINE>
     c
+
+    >>> text_indentation(10)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+     >>> text_indentation(""" We are learning now Python Programming Language""", 10)
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+    >>> text_indentation("This is a string. text")
+    This is a string.
+    <BLANKLINE>
+    text
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation("""...""")
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+    >>> text_indentation("""Let's try with: a lot of spaces         is it working?		\even more spaces please. Check""")
+    Let's try with:
+    <BLANKLINE>
+    a lot of spaces         is it working?
+    <BLANKLINE>
+    even more spaces please.
+    <BLANKLINE>
+    Check
