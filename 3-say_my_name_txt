@@ -4,9 +4,16 @@ The ``3-say_my_name`` module
 Using ``say_my_name``
 
 ----------------------------
+Checking docstring for module:
+        >>> __import__('3-say_my_name').__doc__ != None
+        True
 
 Importing method:
           >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Check docstring for function:
+        >>> len(say_my_name.__doc__) > 0
+        True
 
 Now use it:
 
@@ -15,7 +22,7 @@ Now use it:
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
     >>> say_my_name("Marco")
-    My name is Marco
+    My name is Marco 
 
     >>> say_my_name("Sofía", 8)
     Traceback (most recent call last):
@@ -32,5 +39,5 @@ Now use it:
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-    >>> say_my_name("María", "")
-    My name is María
+    >>> say_my_name("Maria", "")
+    My name is Maria 
